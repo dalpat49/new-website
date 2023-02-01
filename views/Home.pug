@@ -8,7 +8,7 @@
     <meta content="Free HTML Templates" name="keywords">
     <meta content="Free HTML Templates" name="description">
     <link rel="icon" type="image/x-icon" href="/img/logo.ico">
-       <base href="https://g-shoppers.onrender.com/">
+        <base href="https://g-shoppers.onrender.com/">
     <link rel="icon" type="image/x-icon" href="/img/logo.png">
 
     //- //- <!-- Favicon -->
@@ -34,47 +34,35 @@
 <body>
     //- //- <!-- Topbar Start -->
     <div class="main_spinner" id="loding" >
-       <img src="/img/spinner.gif" class="spinner" />
-    
+        <img src="/img/spinner.gif" class="spinner" />
+
+    </div>
+
     </div>
     <div class="container-fluid">
-
         <div class="row align-items-center py-3 px-xl-5">
             <div class="col-lg-3 d-none d-lg-block">
                 <a href="" class="text-decoration-none">
-                    <h1 class="m-0 display-5 font-weight-semi-bold"><span class="text-primary font-weight-bold border px-3 mr-1">G</span>Shoppers</h1>
+                    <h1 class="m-0 display-5 font-weight-semi-bold"><span class="text-primary font-weight-bold border px-3 mr-1">G</span>Shopper</h1>
                 </a>
             </div>
-            <div class="col-lg-6 col-6 text-left">
-                <form action="">
-                    <div class="input-group">
-                        <input type="text" class="form-control" placeholder="Search for products" id="search" onkeyup=  " return Search()">
-                        <div class="input-group-append">
-                            <span class="input-group-text bg-transparent text-primary">
-                                <i class="fa fa-search"></i>
-                            </span>
-                        </div>
-                    </div>
-                </form>
-            </div>
-                <div class="col-lg-3 col-6 text-right">
+          
+            <div class="col-lg-9 col-6 text-right">
                 <a href="" class="btn border">
                     <i class="fas fa-heart text-primary"></i>
                     <span class="badge">0</span>
                 </a>
-                <a href="/cart" class="btn border">
+                <a href="" class="btn border">
                     <i class="fas fa-shopping-cart text-primary"></i>
-                
                     <span class="badge">#{productsInCart}</span>
                 </a>
             </div>
-
         </div>
-</div>
-    //- //- <!-- Topbar End -->
+    </div>
+    //- <!-- Topbar End -->
 
 
-    //- //- <!-- Navbar Start -->
+    //- <!-- Navbar Start -->
     <div class="container-fluid mb-5">
         <div class="row border-top px-xl-5">
             <div class="col-lg-3 d-none d-lg-block">
@@ -84,32 +72,32 @@
                 </a>
                 <nav class="collapse show navbar navbar-vertical navbar-light align-items-start p-0 border border-top-0 border-bottom-0" id="navbar-vertical">
                     <div class="navbar-nav w-100 overflow-hidden" style="height: 410px">
+                        
 each cat in category
-                       
                         <a href="/category/#{cat.categoryName}" class="nav-item nav-link">#{cat.categoryName}</a>
 </div>
                 </nav>
 </div>
-            <div class="col-lg-9">
-                <nav class="navbar navbar-expand-lg bg-light navbar-light py-3 py-lg-0 px-0">
-                    <a href="/Home" class="text-decoration-none d-block d-lg-none">
-                        <h1 class="m-0 display-5 font-weight-semi-bold"><span class="text-primary font-weight-bold border px-3 mr-1">G</span>Shoppers</h1>
-                    </a>
-                    <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-                    <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
-                        <div class="navbar-nav mr-auto py-0" id="navDiv">
-                            <a href="/Home" class="nav-item nav-link navBtn">Home</a>
-                            <a href="/shop" class="nav-item nav-link navBtn">Shop</a>
-                            <div class="nav-item dropdown">
-                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Pages</a>
-                                <div class="dropdown-menu rounded-0 m-0">
-                                    <a href="/cart" class="dropdown-item">Shopping Cart</a>
-                                </div>
-                            </div>
-                            <a href="/contact" class="nav-item nav-link navBtn">Contact</a>
+    <div class="col-lg-9">
+        <nav class="navbar navbar-expand-lg bg-light navbar-light py-3 py-lg-0 px-0">
+            <a href="/Home" class="text-decoration-none d-block d-lg-none">
+                <h1 class="m-0 display-5 font-weight-semi-bold"><span class="text-primary font-weight-bold border px-3 mr-1">G</span>Shoppers</h1>
+            </a>
+            <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
+                <div class="navbar-nav mr-auto py-0" id="navDiv">
+                    <a href="/Home" class="nav-item nav-link navBtn">Home</a>
+                    <a href="/shop" class="nav-item nav-link navBtn">Shop</a>
+                    <div class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Pages</a>
+                        <div class="dropdown-menu rounded-0 m-0">
+                            <a href="/cart" class="dropdown-item">Shopping Cart</a>
                         </div>
+                    </div>
+                    <a href="/contact" class="nav-item nav-link navBtn">Contact</a>
+                </div>
 <div class="nav-item dropdown border border-none ">
     <a href="#" data-toggle="dropdown" class="nav-item nav-link dropdown-toggle user-action"><img src="/img/#{userData.photo}" class="avatar img-fluid  rounded" width="30rem" height="30rem" alt="Avatar"> #{userData.fullname} <b class="caret"></b></a>
     <div class="dropdown-menu">
@@ -118,8 +106,8 @@ each cat in category
         <div class="divider dropdown-divider"></div>
         <a href="/logout" class="dropdown-item"><i class="material-icons">&#xE8AC;</i> Logout</a>
     </div>
+        </div>
             </div>
-                </div>
     </nav>
 
 
@@ -160,14 +148,14 @@ each cat in category
             </div>
         </a>
     </div>
-            </div>
+        </div>
     </div>
     </div>
 
 
     //- //- <!-- Categories End --> 
 
-   
+
 
     //- <!-- Products Start -->
     <div class="container-fluid pt-5">
@@ -177,53 +165,53 @@ each cat in category
         </div>
         <div class="row px-xl-5 pb-3">
 each detail in products
-            <div class="col-lg-3 col-md-6 col-sm-12 pb-1 productDiv ">
-                <div class="card product-item border-0 mb-4 border-red">
-                    <div class="card-header product-img position-relative overflow-hidden bg-transparent border p-0 " >
-                        <img class="img-fluid w-100" style="width:200px; height:300px" src="img/#{detail.image[0]}" alt="">
-                    </div>
-                    <div class="card-body border-left border-right text-center p-0 pt-4 pb-3">
-                        <h6 class="text-truncate mb-3 productName">#{detail.productName}</h6>
-                        <div class="d-flex justify-content-center">
-                            <h6>&#8377;#{detail.price}</h6><h6 class="text-muted ml-2"></h6>
-                        </div>
-                    </div>
-                    <div class="card-footer d-flex justify-content-between bg-light border">
-                        <a href="/product_detail/#{detail._id}" class="btn btn-sm text-dark p-0 mx-auto"><i class="fas fa-eye text-primary mr-1"></i>View Detail</a>
-                    </div>
+    <div class="col-lg-3 col-md-6 col-sm-12 pb-1 productDiv ">
+        <div class="card product-item border-0 mb-4 border-red">
+            <div class="card-header product-img position-relative overflow-hidden bg-transparent border p-0 " >
+                <img class="img-fluid w-100" style="width:200px; height:300px" src="img/#{detail.image[0]}" alt="">
+            </div>
+            <div class="card-body border-left border-right text-center p-0 pt-4 pb-3">
+                <h6 class="text-truncate mb-3 productName">#{detail.productName}</h6>
+                <div class="d-flex justify-content-center">
+                    <h6>&#8377;#{detail.price}</h6><h6 class="text-muted ml-2"></h6>
                 </div>
             </div>
+            <div class="card-footer d-flex justify-content-between bg-light border">
+                <a href="/product_detail/#{detail._id}" class="btn btn-sm text-dark p-0 mx-auto"><i class="fas fa-eye text-primary mr-1"></i>View Detail</a>
+            </div>
+        </div>
+    </div>
 
 </div>
     </div>
 -// products end
 <div class="container-fluid pt-5">
-        <div class="row px-xl-5 pb-3">
-            <div class="col-lg-3 col-md-6 col-sm-12 pb-1">
-                <div class="d-flex align-items-center border mb-4" style="padding: 30px;">
-                    <h1 class="fa fa-check text-primary m-0 mr-3"></h1>
-                    <h5 class="font-weight-semi-bold m-0">Quality Product</h5>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-6 col-sm-12 pb-1">
-                <div class="d-flex align-items-center border mb-4" style="padding: 30px;">
-                    <h1 class="fa fa-shipping-fast text-primary m-0 mr-2"></h1>
-                    <h5 class="font-weight-semi-bold m-0">Free Shipping</h5>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-6 col-sm-12 pb-1">
-                <div class="d-flex align-items-center border mb-4" style="padding: 30px;">
-                    <h1 class="fas fa-exchange-alt text-primary m-0 mr-3"></h1>
-                    <h5 class="font-weight-semi-bold m-0">14-Day Return</h5>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-6 col-sm-12 pb-1">
-                <div class="d-flex align-items-center border mb-4" style="padding: 30px;">
-                    <h1 class="fa fa-phone-volume text-primary m-0 mr-3"></h1>
-                    <h5 class="font-weight-semi-bold m-0">24/7 Support</h5>
-                </div>
+    <div class="row px-xl-5 pb-3">
+        <div class="col-lg-3 col-md-6 col-sm-12 pb-1">
+            <div class="d-flex align-items-center border mb-4" style="padding: 30px;">
+                <h1 class="fa fa-check text-primary m-0 mr-3"></h1>
+                <h5 class="font-weight-semi-bold m-0">Quality Product</h5>
             </div>
         </div>
+        <div class="col-lg-3 col-md-6 col-sm-12 pb-1">
+            <div class="d-flex align-items-center border mb-4" style="padding: 30px;">
+                <h1 class="fa fa-shipping-fast text-primary m-0 mr-2"></h1>
+                <h5 class="font-weight-semi-bold m-0">Free Shipping</h5>
+            </div>
+        </div>
+        <div class="col-lg-3 col-md-6 col-sm-12 pb-1">
+            <div class="d-flex align-items-center border mb-4" style="padding: 30px;">
+                <h1 class="fas fa-exchange-alt text-primary m-0 mr-3"></h1>
+                <h5 class="font-weight-semi-bold m-0">14-Day Return</h5>
+            </div>
+        </div>
+        <div class="col-lg-3 col-md-6 col-sm-12 pb-1">
+            <div class="d-flex align-items-center border mb-4" style="padding: 30px;">
+                <h1 class="fa fa-phone-volume text-primary m-0 mr-3"></h1>
+                <h5 class="font-weight-semi-bold m-0">24/7 Support</h5>
+            </div>
+        </div>
+    </div>
 </div>
 
 
@@ -235,22 +223,22 @@ each detail in products
         </div>
         <div class="row px-xl-5 pb-3">
 each detail in womenproducts
-            <div class="col-lg-3 col-md-6 col-sm-12 pb-1 productDiv ">
-                <div class="card product-item border-0 mb-4 border-red">
-                    <div class="card-header product-img position-relative overflow-hidden bg-transparent border p-0 " >
-                        <img class="img-fluid w-100" style="width:200px; height:300px" src="img/#{detail.image[0]}" alt="">
-                    </div>
-                    <div class="card-body border-left border-right text-center p-0 pt-4 pb-3">
-                        <h6 class="text-truncate mb-3 productName">#{detail.productName}</h6>
-                        <div class="d-flex justify-content-center">
-                            <h6>&#8377;#{detail.price}</h6><h6 class="text-muted ml-2"></h6>
-                        </div>
-                    </div>
-                    <div class="card-footer d-flex justify-content-between bg-light border">
-                        <a href="/product_detail/#{detail._id}" class="btn btn-sm text-dark p-0 mx-auto"><i class="fas fa-eye text-primary mr-1"></i>View Detail</a>
-                    </div>
+    <div class="col-lg-3 col-md-6 col-sm-12 pb-1 productDiv ">
+        <div class="card product-item border-0 mb-4 border-red">
+            <div class="card-header product-img position-relative overflow-hidden bg-transparent border p-0 " >
+                <img class="img-fluid w-100" style="width:200px; height:300px" src="img/#{detail.image[0]}" alt="">
+            </div>
+            <div class="card-body border-left border-right text-center p-0 pt-4 pb-3">
+                <h6 class="text-truncate mb-3 productName">#{detail.productName}</h6>
+                <div class="d-flex justify-content-center">
+                    <h6>&#8377;#{detail.price}</h6><h6 class="text-muted ml-2"></h6>
                 </div>
             </div>
+            <div class="card-footer d-flex justify-content-between bg-light border">
+                <a href="/product_detail/#{detail._id}" class="btn btn-sm text-dark p-0 mx-auto"><i class="fas fa-eye text-primary mr-1"></i>View Detail</a>
+            </div>
+        </div>
+    </div>
 
 </div>
     </div>
@@ -283,7 +271,7 @@ each detail in womenproducts
                                 <a class="text-dark" href="/contact"><i class="fa fa-angle-right mr-2"></i>Contact Us</a>
                             </div>
                         </div>
-                       
+
                         <div class="col-md-6 mb-5">
                             <h5 class="font-weight-bold text-dark mb-4">Newsletter</h5>
                             <form action="/subscription/to/G-Shoppers/"  method="post">
@@ -326,7 +314,7 @@ each detail in womenproducts
 
     //- <!-- Contact Javascript File -->
     <script src="mail/jqBootstrapValidation.min.js"></script>
- 
+
 
     //- <!-- Template Javascript -->
     <script src="/js/Home.js"></script>
