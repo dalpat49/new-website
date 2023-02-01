@@ -79,6 +79,7 @@ mongoose
 //session setup
 route.use(
     session({
+        store: MongoStore.create({ mongoUrl: process.env.DB }),
         secret: "thisismysecrctekeyfhrgfgrfrty84fwir767",
         saveUninitialized: true,
         resave: true,
@@ -86,7 +87,6 @@ route.use(
             secure: false,
             maxAge: 8*60*60*1000 ,
         },
-        store: MongoStore.create({ mongoUrl: process.env.DB })
     })
 );
 
