@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="/img/logo.png">
+
+
+
+    <title>Add product Admin-panel</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+   
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://unpkg.com/flowbite@1.6.0/dist/flowbite.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+
+</head>
+<body >
+    
+
+  
+<div class="">
+ <div class="min-h-screen flex flex-col flex-auto flex-shrink-0 antialiased bg-white text-black">
+      <div class="fixed w-full flex items-center justify-between h-14 bg-blue-900 text-white z-10">
+        <div class="flex items-center justify-start md:justify-center pl-3 w-14 md:w-64 h-14 bg-blue-900  border-none">
+          <img class="w-7 h-7 md:w-10 md:h-10 mr-2 rounded-md overflow-hidden" src="/img/#{adminDetails.image}" />
+          <span class="hidden md:block">#{adminDetails.name}</span>
+        </div>
+        <div class="flex justify-between items-center h-14 bg-blue-900  header-right">
+          
+          <ul class="flex items-center">
+            
+            <li>
+              <div class="block w-px h-6 mx-3 bg-gray-400 dark:bg-gray-700"></div>
+            </li>
+            <li>
+              <a href="/adminLogout" class="flex items-center mr-4 hover:text-blue-100">
+                <span class="inline-flex mr-1">
+                  <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1"></path></svg>
+                </span>Logout
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+     
+      <div class="fixed flex flex-col top-14 left-0 w-14 hover:w-64 md:w-64 bg-blue-900 dark:bg-gray-900 h-full text-white transition-all duration-300 border-none z-10 sidebar">
+        <div class="overflow-y-auto overflow-x-hidden flex flex-col justify-between flex-grow">
+          <ul class="flex flex-col py-4 space-y-1">
+            <li class="px-5 hidden md:block">
+              <div class="flex flex-row items-center h-8">
+                <div class="text-sm font-light tracking-wide text-gray-400 uppercase">Main</div>
+              </div>
+            </li>
+            <li>
+              <a href="/admin/adminHome" class="relative flex flex-row items-center h-11 focus:outline-none hover:bg-blue-800 dark:hover:bg-gray-600 text-white-600 hover:text-white border-l-4 border-transparent hover:border-blue-500 dark:hover:border-gray-800 pr-6">
+                <span class="inline-flex justify-center items-center ml-4">
+                  <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"></path></svg>
+                </span>
+                <span class="ml-2 text-sm tracking-wide truncate">Dashboard</span>
+              </a>
+            </li>
+            <li>
+              <a href="/admin/users" class="relative flex flex-row items-center h-11 focus:outline-none hover:bg-blue-800 dark:hover:bg-gray-600 text-white-600 hover:text-white border-l-4 border-transparent hover:border-blue-500 dark:hover:border-gray-800 pr-6">
+                <span class="inline-flex justify-center items-center ml-4">
+                  <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 13V6a2 2 0 00-2-2H6a2 2 0 00-2 2v7m16 0v5a2 2 0 01-2 2H6a2 2 0 01-2-2v-5m16 0h-2.586a1 1 0 00-.707.293l-2.414 2.414a1 1 0 01-.707.293h-3.172a1 1 0 01-.707-.293l-2.414-2.414A1 1 0 006.586 13H4"></path></svg>
+                </span>
+                <span class="ml-2 text-sm tracking-wide truncate">Users</span>
+              </a>
+            </li>
+            <li>
+            <button type="button" class="flex items-center w-full h-11 p-2 text-base font-normal text-gray-900 transition duration-75  group hover:bg-blue-800 ml-2 border-l-4 border-transparent   hover:border-blue-500 " aria-controls="dropdown-example" data-collapse-toggle="dropdown-example">
+                  <svg aria-hidden="true" class="flex-shrink-0 w-6 h-6 text-white transition duration-75 group-hover:text-gray-900 dark:text-gray-400 dark:group-hover:text-white" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 2a4 4 0 00-4 4v1H5a1 1 0 00-.994.89l-1 9A1 1 0 004 18h12a1 1 0 00.994-1.11l-1-9A1 1 0 0015 7h-1V6a4 4 0 00-4-4zm2 5V6a2 2 0 10-4 0v1h4zm-6 3a1 1 0 112 0 1 1 0 01-2 0zm7-1a1 1 0 100 2 1 1 0 000-2z" clip-rule="evenodd"></path></svg>
+                  <span class="flex-1 ml-1 text-left whitespace-nowrap text-white " sidebar-toggle-item>Products</span>
+                  <svg sidebar-toggle-item class="w-6 h-6 text-white mr-2"  fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+            </button>
+            <ul id="dropdown-example" class="hidden py-2 space-y-2 px-4">
+                  <li>
+                     <a href="/admin/itemCategory" class="flex items-center w-full p-2 text-white font-normal  transition duration-75  pl-11 group hover:bg-blue-800 border-l-4 border-transparent   hover:border-blue-500 ">item categories</a>
+                  </li>
+                  <li>
+                     <a href="/admin/allProducts" class="flex items-center w-full p-2 text-white font-normal text-gray-900 transition duration-75  pl-11 group hover:bg-blue-800 border-l-4 border-transparent   hover:border-blue-500 ">All products </a>
+                  </li>
+                  <li>
+                     <a href="/admin/allOrders" class="flex items-center w-full p-2 text-white font-normal text-gray-900 transition duration-75  pl-11 group hover:bg-blue-800 border-l-4 border-transparent   hover:border-blue-500 ">All Orders </a>
+                  </li>
+                  <li>
+                     <a href="/admin/allCoupans" class="flex items-center w-full p-2 text-white font-normal text-gray-900 transition duration-75  pl-11 group hover:bg-blue-800 border-l-4 border-transparent   hover:border-blue-500 ">All Coupans</a>
+                  </li>
+                 
+            </ul>
+          </li>
+            <li>
+              <a href="/admin/reviews" class="relative flex flex-row items-center h-11 focus:outline-none hover:bg-blue-800 dark:hover:bg-gray-600 text-white-600 hover:text-white border-l-4 border-transparent hover:border-blue-500 dark:hover:border-gray-800 pr-6">
+                <span class="inline-flex justify-center items-center ml-4">
+                  <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 8h10M7 12h4m1 8l-4-4H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-3l-4 4z"></path></svg>
+                </span>
+                <span class="ml-2 text-sm tracking-wide truncate">Reviews</span>
+              </a>
+            </li>
+              
+            <li class="px-5 hidden md:block">
+              <div class="flex flex-row items-center mt-5 h-8">
+                <div class="text-sm font-light tracking-wide text-gray-400 uppercase">Settings</div>
+              </div>
+            </li>
+            <li>
+              <a href="/admin/adminProfile" class="relative flex flex-row items-center h-11 focus:outline-none hover:bg-blue-800 dark:hover:bg-gray-600 text-white-600 hover:text-white border-l-4 border-transparent hover:border-blue-500 dark:hover:border-gray-800 pr-6">
+                <span class="inline-flex justify-center items-center ml-4">
+                  <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path></svg>
+                </span>
+                <span class="ml-2 text-sm tracking-wide truncate">Profile</span>
+              </a>
+            </li>
+            
+          </ul>
+          <p class="mb-14 px-5 py-3 hidden md:block text-center text-xs">Copyright @2023</p>
+        </div>
+      </div>
+
+
+
+<div class="h-full ml-13 mt-14 mb-10 md:ml-64">
+
+<div class="relative mx-auto p-4 w-full max-w-2xl h-full md:h-auto">
+        
+        <div class="relative p-4 bg-white rounded-lg shadow  sm:p-5">
+                        <div class="flex justify-between items-center pb-4 mb-4 rounded-t border-b sm:mb-5 dark:border-gray-600">
+        <h3 class="text-lg font-semibold text-gray-900 dark:text-white">    Add Product
+        </h3>
+                
+            </div>
+
+            <form action="/admin/addedProduct" method="post"  enctype="multipart/form-data" onsubmit="return checkValidation()" name="productForm">
+                <div class="grid gap-4 mb-4 sm:grid-cols-2">
+                    <div>
+                        <label for="category" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Category</label>
+                        <select id="category" name="category" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500">
+                            //- <option selected=" " name="category">Select category</option>
+each item  in category
+                            <option name="category" value="#{item.categoryName}">#{item.categoryName}</option>
+                            
+</select>
+                    </div>
+           
+                    <div>
+                        <label for="name" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Product name</label>
+                        <input type="text" name="productName" id="productName" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="Type product name" required="">
+                        <p class="text-xs italic text-red-500 error" id="nameError"> </p>
+                    </div>
+                    <div>
+                        <label for="brand" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Brand</label>
+                        <input type="text" name="brand" id="brand" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="Product brand" required="">
+                    </div>
+                    <div>
+                        <label for="price" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Price</label>
+                        <input type="number" name="price" id="price" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="$2999" required="">
+                    </div>
+                    <div class="flex flex-wrap sm:col-span-2 ">
+
+
+<div class="flex items-center mr-4">
+        <input id="size" type="checkbox" value="S" name="size" class="w-4 h-4 text-red-600 bg-gray-100 border-gray-300 focus:ring-red-500 dark:focus:ring-red-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+        <label for="size" class="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300">small</label>
+</div>
+<div class="flex items-center mr-4">
+        <input id="size" type="checkbox" value="M" name="size" class="w-4 h-4 text-red-600 bg-gray-100 border-gray-300 focus:ring-red-500 dark:focus:ring-red-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+        <label for="size" class="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300">Medium</label>
+</div>
+<div class="flex items-center mr-4">
+        <input id="size" type="checkbox" value="L" name="size" class="w-4 h-4 text-red-600 bg-gray-100 border-gray-300 focus:ring-red-500 dark:focus:ring-red-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+        <label for="size" class="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300">Large</label>
+</div>
+<div class="flex items-center mr-4">
+        <input id="size" type="checkbox" value="XL" name="size" class="w-4 h-4 text-red-600 bg-gray-100 border-gray-300 focus:ring-red-500 dark:focus:ring-red-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+        <label for="size" class="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300">extra Large</label>
+</div>
+<div class="flex items-center mr-4">
+        <input id="size" type="checkbox" value="XXL" name="size" class="w-4 h-4 text-red-600 bg-gray-100 border-gray-300 focus:ring-red-500 dark:focus:ring-red-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+        <label for="size" class="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300">Double Extra large</label>
+</div>
+</div>
+                    
+                    <div class="sm:col-span-2">
+                        <label for="description" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Description</label>
+                        <textarea id="description" rows="4" name="description" class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="Write product description here"></textarea>                    
+                    </div>
+                    <div class="sm:col-span-2">
+                        <label for="aditionalInformation" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Additional information</label>
+                        <textarea id="aditionalInformation" rows="4" name="aditionalInformation" class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="Write product aditional description here"></textarea>                    
+                    </div>
+                        <div>
+                      
+<input  type="file" id="productImage"  name="productImage" multiple accept="image/*"  class="block w-full text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 dark:text-gray-400 focus:outline-none dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400"  >
+                    
+                    </div>
+                    <div class="flex flex-wrap">
+<div class="flex items-center mr-4">
+        <input id="red-radio" type="radio" value="active" name="radio" class="w-4 h-4 text-red-600 bg-gray-100 border-gray-300 focus:ring-red-500 dark:focus:ring-red-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+        <label for="red-radio" class="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300">active</label>
+</div>
+<div class="flex items-center mr-4">
+        <input id="red-radio" type="radio" value="deactivate" name="radio" class="w-4 h-4 text-red-600 bg-gray-100 border-gray-300 focus:ring-red-500 dark:focus:ring-red-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+        <label for="red-radio" class="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300">deactive</label>
+</div>
+</div>
+                <button type="submit" class="text-white text-center bg-green-400 inline-flex items-center bg-primary-700 hover:bg-primary-800 focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-sm pl-10 py-2.5 text-center dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800"> Add new product
+                </button>
+<form>
+        </div>
+        </div>
+</div>
+</div>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js" integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V" crossorigin="anonymous"></script>
+  
+    <script src="https://unpkg.com/flowbite@1.6.0/dist/flowbite.min.js"></script>
+</body>
+</html>
+
+
+
+
+
