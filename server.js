@@ -12,6 +12,7 @@ const app = express();
 app.use(cookieparser());
 
 const port =  process.env.PORT || 10000 ;
+host = "localhost"
 
 
 
@@ -30,7 +31,7 @@ app.use('/',route);
 
 
 //server
-app.listen(port, () => {
+app.listen(port, host,() => {
     console.log(`server has  been started at ${port}`)
 })
 
