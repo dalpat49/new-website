@@ -81,7 +81,7 @@
                 </a>
                 <nav class="collapse show navbar navbar-vertical navbar-light align-items-start p-0 border border-top-0 border-bottom-0" id="navbar-vertical">
                     <div class="navbar-nav w-100 overflow-hidden" style="height: 410px">
-                    
+                        
 each cat in category
                         <a href="/category/#{cat.categoryName}" class="nav-item nav-link">#{cat.categoryName}</a>
 </div>
@@ -96,19 +96,19 @@ each cat in category
                         <span class="navbar-toggler-icon"></span>
                     </button>
                     <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
-                        <div class="navbar-nav mr-auto py-0" id="navDiv">
-                            <a href="/Home" class="nav-item nav-link active">Home</a>
-                            <a href="/shop" class="nav-item nav-link">Shop</a>
+                        <div class="navbar-nav mr-auto py-0 " id="navDiv">
+                            <a href="/Home" class="nav-item nav-link  navBtn">Home</a>
+                            <a href="/shop" class="nav-item nav-link navBtn">Shop</a>
                             <div class="nav-item dropdown">
                                 <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Pages</a>
                                 <div class="dropdown-menu rounded-0 m-0">
                                     <a href="/cart" class="dropdown-item">Shopping Cart</a>
                                 </div>
                             </div>
-                            <a href="/contact" class="nav-item nav-link">Contact</a>
+                            <a href="/contact" class="nav-item nav-link navBtn">Contact</a>
                         </div>
 <div class="nav-item dropdown border border-none ">
-    <a href="#" data-toggle="dropdown" class="nav-item nav-link dropdown-toggle user-action"><img src="/img/#{userData.photo}" class="avatar img-fluid  rounded" width="30rem" height="30rem"  alt="Avatar">#{userData.fullname} <b class="caret"></b></a>
+    <a href="#" data-toggle="dropdown" class="nav-item nav-link dropdown-toggle user-action"><img src="img/#{userData.photo}" class="avatar img-fluid  rounded" width="30rem" height="30rem"  alt="Avatar"> #{userData.fullname} <b class="caret"></b></a>
     <div class="dropdown-menu">
         <a href="/userProfile" class="dropdown-item"><i class="fa fa-user-o"></i> Profile</a>
         <a href="/orderHistory" class="dropdown-item"><i class="fa fa-user-o"></i>Order history</a>
@@ -122,7 +122,7 @@ each cat in category
     <div id="header-carousel" class="carousel slide" data-ride="carousel">
         <div class="carousel-inner">
             <div class="carousel-item active" style="height: 410px;">
-                <img class="img-fluid" src="/img/carousel-1.jpg" alt="Image">
+                <img class="img-fluid" src="img/carousel-1.jpg" alt="Image">
                 <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
                     <div class="p-3" style="max-width: 700px;">
                         <h4 class="text-light text-uppercase font-weight-medium mb-3">10% Off Your First Order</h4>
@@ -132,7 +132,7 @@ each cat in category
                 </div>
             </div>
             <div class="carousel-item" style="height: 410px;">
-                <img class="img-fluid" src="/img/carousel-2.jpg" alt="Image">
+                <img class="img-fluid" src="img/carousel-2.jpg" alt="Image">
                 <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
                     <div class="p-3" style="max-width: 700px;">
                         <h4 class="text-light text-uppercase font-weight-medium mb-3">10% Off Your First Order</h4>
@@ -154,7 +154,6 @@ each cat in category
         </a>
     </div>
             </div>
-    </div>
     </div>
     </div>
     //- <!-- Navbar End -->
