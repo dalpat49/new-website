@@ -5617,7 +5617,7 @@ a.close.disabled {
   width:10rem;
   position: absolute;
   top:35%;
-  left:45%;
+  left:40%;
   z-index: 100;
 
   
@@ -6066,6 +6066,7 @@ input[type=number]::-webkit-outer-spin-button {
   border-right-color: transparent;
   border-radius: 50%;
   animation: spinner-border .75s linear infinite;
+  -webkit-animation: spinner-border .75s linear infinite;
 }
 
 .spinner-border-sm {
