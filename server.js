@@ -15,7 +15,6 @@ const port =  process.env.PORT || 10000 ;
 
 
 
-
 app.set(express.urlencoded({ extended: true }));
 app.use(express.static("./static"));
 app.set("view engine", `pug`);
