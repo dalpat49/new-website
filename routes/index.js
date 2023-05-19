@@ -25,10 +25,6 @@ const admin = require("../models/adminModel");
 const address = require("../models/addressModel");
 const category = require("../models/categoryModel");
 
-
-
-
-
 //multer setup
 const storage = multer.diskStorage({
     destination: "static/img",
@@ -1315,7 +1311,7 @@ route.get("/logout", isLogin, async (req, res) => {
 
 //********************************************admin  pages************ */
 //admin Login page
-route.get("/admin/AdminLogin", (req, res) => {
+route.get("/    ", (req, res) => {
     if (req.session.admin_id) {
         return res.redirect("/admin/adminHome");
     } else {
