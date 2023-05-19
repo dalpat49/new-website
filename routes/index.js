@@ -1311,7 +1311,7 @@ route.get("/logout", isLogin, async (req, res) => {
 
 //********************************************admin  pages************ */
 //admin Login page
-route.get("/    ", (req, res) => {
+route.get("/admin/adminLogin", (req, res) => {
     if (req.session.admin_id) {
         return res.redirect("/admin/adminHome");
     } else {
